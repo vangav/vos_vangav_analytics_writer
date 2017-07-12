@@ -1,0 +1,82 @@
+= **Keyspace: v_analytics** =
+Description: used for storing Vangav's website analytics
+===== Replications =====
+| **Name** | **Replication** | **Description**
+| dev | 'class': 'SimpleStrategy', 'replication_factor' : 1 | used for dev environment
+
+== Table: daily_action_counters ==
+Description: stores daily count per action
+===== Columns =====
+| **Name** | **Type**
+| year_month_day_action | varchar
+| action_count | counter
+`Partition Keys: year_month_day_action`
+`Caching: ALL`
+
+===== Queries: =====
+
+**Query: increment**
+increments action_count
+`UPDATE v_analytics.daily_action_counters SET action_count = action_count + 1 WHERE year_month_day_action = :year_month_day_action;`
+**Query: select**
+selects action_count
+`SELECT action_count FROM v_analytics.daily_action_counters WHERE year_month_day_action = :year_month_day_action;`
+
+
+== Table: monthly_action_counters ==
+Description: stores monthly count per action
+===== Columns =====
+| **Name** | **Type**
+| year_month_action | varchar
+| action_count | counter
+`Partition Keys: year_month_action`
+`Caching: ALL`
+
+===== Queries: =====
+
+**Query: increment**
+increments action_count
+`UPDATE v_analytics.monthly_action_counters SET action_count = action_count + 1 WHERE year_month_action = :year_month_action;`
+**Query: select**
+selects action_count
+`SELECT action_count FROM v_analytics.monthly_action_counters WHERE year_month_action = :year_month_action;`
+
+
+== Table: annual_action_counters ==
+Description: stores annual count per action
+===== Columns =====
+| **Name** | **Type**
+| year_action | varchar
+| action_count | counter
+`Partition Keys: year_action`
+`Caching: ALL`
+
+===== Queries: =====
+
+**Query: increment**
+increments action_count
+`UPDATE v_analytics.annual_action_counters SET action_count = action_count + 1 WHERE year_action = :year_action;`
+**Query: select**
+selects action_count
+`SELECT action_count FROM v_analytics.annual_action_counters WHERE year_action = :year_action;`
+
+
+== Table: total_action_counters ==
+Description: stores total count per action
+===== Columns =====
+| **Name** | **Type**
+| action | varchar
+| action_count | counter
+`Partition Keys: action`
+`Caching: ALL`
+
+===== Queries: =====
+
+**Query: increment**
+increments action_count
+`UPDATE v_analytics.total_action_counters SET action_count = action_count + 1 WHERE action = :action;`
+**Query: select**
+selects action_count
+`SELECT action_count FROM v_analytics.total_action_counters WHERE action = :action;`
+
+

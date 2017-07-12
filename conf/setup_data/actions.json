@@ -1,0 +1,23 @@
+{
+  "categories": [
+    {
+      "category_name": "page_views",
+      "category_name_short": "PV"
+    }
+  ],
+  "action_classes": [
+    {
+      "class_name": "backend_page_views",
+      "class_prefix": "BPV",
+      "class_wide_categories": [
+        "PV"
+      ],
+      "action_ids": [
+        {
+          "action_id": "quick_start",
+          "action_categories": []
+        }
+      ]
+    }
+  ]
+}

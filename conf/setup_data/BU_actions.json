@@ -1,0 +1,25 @@
+{
+  "categories": [
+    {
+      "category_name": "",
+      "category_name_short": ""
+    }
+  ],
+  "action_classes": [
+    {
+      "class_name": "",
+      "class_prefix": "",
+      "class_wide_categories": [
+        ""
+      ],
+      "action_ids": [
+        {
+          "action_id": "",
+          "action_categories": [
+            ""
+          ]
+        }
+      ]
+    }
+  ]
+}
