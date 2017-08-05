@@ -112,6 +112,36 @@
 | [get total action counters](https://github.com/vangav/vos_vangav_analytics_reader/tree/master/app/com/vangav/vos_vangav_analytics_reader/controllers/get_total_action_counters), [get annual action counters](https://github.com/vangav/vos_vangav_analytics_reader/tree/master/app/com/vangav/vos_vangav_analytics_reader/controllers/get_annual_action_counters), [get monthly action counters](https://github.com/vangav/vos_vangav_analytics_reader/tree/master/app/com/vangav/vos_vangav_analytics_reader/controllers/get_monthly_action_counters), [get daily action counters](https://github.com/vangav/vos_vangav_analytics_reader/tree/master/app/com/vangav/vos_vangav_analytics_reader/controllers/get_daily_action_counters), [get category actions](https://github.com/vangav/vos_vangav_analytics_reader/tree/master/app/com/vangav/vos_vangav_analytics_reader/controllers/get_category_actions) and [get current date](https://github.com/vangav/vos_vangav_analytics_reader/tree/master/app/com/vangav/vos_vangav_analytics_reader/controllers/get_current_date) | handle getting analytics data by category, action and/or time |
 | [reload properties](https://github.com/vangav/vos_vangav_analytics_reader/tree/master/app/com/vangav/vos_vangav_analytics_reader/controllers/reload_properties) | handles reloading properties files as well as [actions.json](https://github.com/vangav/vos_vangav_analytics_reader/blob/master/conf/setup_data/actions.json) |
 
+## service references
+
+### [vangav analytics writer](https://github.com/vangav/vos_vangav_analytics_writer)
+
+| reference | explanation |
+| --------- | ----------- |
+| [routes](https://github.com/vangav/vos_vangav_analytics_writer/blob/master/conf/routes) | api routes |
+| [setup data](https://github.com/vangav/vos_vangav_analytics_writer/tree/master/conf/setup_data) | contains [actions.json](https://github.com/vangav/vos_vangav_analytics_writer/blob/master/conf/setup_data/actions.json) used to define the analytics structure |
+| [controllers.json](https://github.com/vangav/vos_vangav_analytics_writer/blob/master/generator_config/controllers.json) | api request/response's elements |
+| [v_analytics.keyspace](https://github.com/vangav/vos_vangav_analytics_writer/blob/master/generator_config/v_analytics.keyspace) | `v_analytics` is the keyspace used for storing analytics |
+| [Global.java](https://github.com/vangav/vos_vangav_analytics_writer/blob/master/app/Global.java) | actions structure initialization |
+| [actions](https://github.com/vangav/vos_vangav_analytics_writer/tree/master/app/com/vangav/vos_vangav_analytics_writer/actions) | contains the json representation of [actions.json](https://github.com/vangav/vos_vangav_analytics_writer/blob/master/conf/setup_data/actions.json) as well as its loader |
+| [controllers](https://github.com/vangav/vos_vangav_analytics_writer/tree/master/app/com/vangav/vos_vangav_analytics_writer/controllers) | api implementation |
+| [v_analytics](https://github.com/vangav/vos_vangav_analytics_writer/tree/master/app/com/vangav/vos_vangav_analytics_writer/cassandra_keyspaces/v_analytics) | `v_analytics` cassandra's keyspace client |
+
+### [vangav analytics reader](https://github.com/vangav/vos_vangav_analytics_reader)
+
+| reference | explanation |
+| --------- | ----------- |
+| [routes](https://github.com/vangav/vos_vangav_analytics_reader/blob/master/conf/routes) | api routes |
+| [setup data](https://github.com/vangav/vos_vangav_analytics_reader/tree/master/conf/setup_data) | contains [actions.json](https://github.com/vangav/vos_vangav_analytics_reader/blob/master/conf/setup_data/actions.json) used to define the analytics structure |
+| [controllers.json](https://github.com/vangav/vos_vangav_analytics_reader/blob/master/generator_config/controllers.json) | api request/response's elements |
+| [v_analytics.keyspace](https://github.com/vangav/vos_vangav_analytics_reader/blob/master/generator_config/v_analytics.keyspace) | `v_analytics` is the keyspace used for storing analytics |
+| [Global.java](https://github.com/vangav/vos_vangav_analytics_reader/blob/master/app/Global.java) | actions structure initialization |
+| [actions](https://github.com/vangav/vos_vangav_analytics_reader/tree/master/app/com/vangav/vos_vangav_analytics_reader/actions) | contains the json representation of [actions.json](https://github.com/vangav/vos_vangav_analytics_reader/blob/master/conf/setup_data/actions.json) as well as its loader |
+| [controllers](https://github.com/vangav/vos_vangav_analytics_reader/tree/master/app/com/vangav/vos_vangav_analytics_reader/controllers) | api implementation |
+| [v_analytics](https://github.com/vangav/vos_vangav_analytics_reader/tree/master/app/com/vangav/vos_vangav_analytics_reader/cassandra_keyspaces/v_analytics) | `v_analytics` cassandra's keyspace client |
+
+
+
 
 
 
