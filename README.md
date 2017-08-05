@@ -11,6 +11,12 @@
 
 ## functionality
 
+### design philosophy
+
++ splitting the analytics backend into writer and reader services is done because writer/reader loads can vary significantly (i.e.: writer can take the load of millions of users using analyzed services while the reader can be used by few system admins); so it's easier to handle these loads by deploying a lot more writer than reader services
++ actions are defined in a flexible/generic json file (as explained later in this section) to make it easily extensible in handling analysis as backend services change/grow
++ both of the writer and reader services have actions-config-reload feature to allow modifying actions without having to re-start the services
+
 ### [vangav analytics writer](https://github.com/vangav/vos_vangav_analytics_writer)
 
 + handles writing analytics
@@ -19,7 +25,7 @@
 
 + handles reading actions in various ways (e.g.: by year, by day, by category, ...)
 
-### action structure
+### actions structure
 
 + [actions.json](https://github.com/vangav/vos_vangav_analytics_writer/blob/master/conf/setup_data/actions.json) in both services define how analytics are structured
 
