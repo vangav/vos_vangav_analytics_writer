@@ -53,16 +53,16 @@
 
 | element | explanation |
 | ------- | ----------- |
-| []() |  |
-| []() |  |
-| []() |  |
-| []() |  |
-| []() |  |
-| []() |  |
-| []() |  |
-| []() |  |
-| []() |  |
-| []() |  |
+| [categories](https://github.com/vangav/vos_vangav_analytics_writer/blob/master/conf/setup_data/actions.json#L2) | defines categories (e.g.: page views, button clicks, ...) |
+| [category_name](https://github.com/vangav/vos_vangav_analytics_writer/blob/master/conf/setup_data/actions.json#L4) | a category name is used mainly for clarity |
+| [category_name_short](https://github.com/vangav/vos_vangav_analytics_writer/blob/master/conf/setup_data/actions.json#L5) | is the one used when querying for categories |
+| [action_classes](https://github.com/vangav/vos_vangav_analytics_writer/blob/master/conf/setup_data/actions.json#L8) | defines classes (e.g.: website, ios app, android app, ...) |
+| [class_name](https://github.com/vangav/vos_vangav_analytics_writer/blob/master/conf/setup_data/actions.json#L10) | a class name is used mainly for clarity |
+| [class_prefix](https://github.com/vangav/vos_vangav_analytics_writer/blob/master/conf/setup_data/actions.json#L11) | is the one used when querying for classes |
+| [class_wide_categories](https://github.com/vangav/vos_vangav_analytics_writer/blob/master/conf/setup_data/actions.json#L12) | categories applied for an action class's action-ids |
+| [action_ids](https://github.com/vangav/vos_vangav_analytics_writer/blob/master/conf/setup_data/actions.json#L15) | defines a single action (e.g.: home-page, download-button, camera-flip, ...) |
+| [action_id](https://github.com/vangav/vos_vangav_analytics_writer/blob/master/conf/setup_data/actions.json#L17) | unique action identifier within its class |
+| [action_categories](https://github.com/vangav/vos_vangav_analytics_writer/blob/master/conf/setup_data/actions.json#L18) | in addition to the class-wide-categories, here one can add extra categories specific to this action |
 
 
 
