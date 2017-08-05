@@ -162,6 +162,40 @@
 | [actions](https://github.com/vangav/vos_vangav_analytics_reader/tree/master/app/com/vangav/vos_vangav_analytics_reader/actions) | added the json representation of [actions.json](https://github.com/vangav/vos_vangav_analytics_reader/blob/master/conf/setup_data/actions.json) as well as its loader |
 | [controllers](https://github.com/vangav/vos_vangav_analytics_reader/tree/master/app/com/vangav/vos_vangav_analytics_reader/controllers) | added the implementation of request processing logic under `controller_name/HandlerControllerName.java` classes and nested response json structures under `controller_name/response_json` packages |
 
+## error codes
+
++ following are the error codes of whatsapp services
+
+### [vangav analytics writer](https://github.com/vangav/vos_vangav_analytics_writer)
+
+| class | code : sub_code | explanation |
+| ----- | --------------- | ----------- |
+| [ActionsManager](https://github.com/vangav/vos_vangav_analytics_writer/blob/master/app/com/vangav/vos_vangav_analytics_writer/actions/ActionsManager.java) |  |  |
+|  | 400 : 1 | invalid actions' category |
+|  | 400 : 2 | actions-config must have at least one actions-class |
+|  | 400 : 3 | invalid actions class |
+|  | 400 : 4 | action class wide category doesn't exist |
+|  | 400 : 5 | an action class must have at least one action id |
+|  | 400 : 6 | invalid action id |
+|  | 400 : 7 | invalid action category prefix |
+| [RequestRecordAction](https://github.com/vangav/vos_vangav_analytics_writer/blob/master/app/com/vangav/vos_vangav_analytics_writer/controllers/record_action/RequestRecordAction.java) |  |  |
+|  | 501 : 1 | invalid class prefix and/or action id |
+
+### [vangav analytics reader](https://github.com/vangav/vos_vangav_analytics_reader)
+
+| class | code : sub_code | explanation |
+| ----- | --------------- | ----------- |
+| [ActionsManager](https://github.com/vangav/vos_vangav_analytics_reader/blob/master/app/com/vangav/vos_vangav_analytics_reader/actions/ActionsManager.java) |  |  |
+|  | 400 : 1 | invalid actions' category |
+|  | 400 : 2 | actions-config must have at least one actions-class |
+|  | 400 : 3 | invalid actions class |
+|  | 400 : 4 | action class wide category doesn't exist |
+|  | 400 : 5 | an action class must have at least one action id |
+|  | 400 : 6 | invalid action id |
+|  | 400 : 7 | invalid action category prefix |
+
+
+
 
 
 
