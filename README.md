@@ -198,72 +198,16 @@
 |  | 501 : 2 | invalid action id |
 |  | 501 : 3 | to-year can't be smaller than from-year |
 |  | 501 : 4 | can't query more than 100 years per request |
-| []() |  |  |
-|  | 501 : 1 |  |
-|  | 501 : 1 |  |
-|  | 501 : 1 |  |
-|  | 501 : 1 |  |
-|  | 501 : 1 |  |
-|  | 501 : 1 |  |
-| []() |  |  |
-|  | 501 : 1 |  |
-|  | 501 : 1 |  |
-|  | 501 : 1 |  |
-|  | 501 : 1 |  |
-|  | 501 : 1 |  |
-|  | 501 : 1 |  |
-| []() |  |  |
-|  | 501 : 1 |  |
-|  | 501 : 1 |  |
-|  | 501 : 1 |  |
-|  | 501 : 1 |  |
-|  | 501 : 1 |  |
-|  | 501 : 1 |  |
-| []() |  |  |
-|  | 501 : 1 |  |
-|  | 501 : 1 |  |
-|  | 501 : 1 |  |
-|  | 501 : 1 |  |
-|  | 501 : 1 |  |
-|  | 501 : 1 |  |
-| []() |  |  |
-|  | 501 : 1 |  |
-|  | 501 : 1 |  |
-|  | 501 : 1 |  |
-|  | 501 : 1 |  |
-|  | 501 : 1 |  |
-|  | 501 : 1 |  |
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+| [RequestGetDailyActionCounters](https://github.com/vangav/vos_vangav_analytics_reader/blob/master/app/com/vangav/vos_vangav_analytics_reader/controllers/get_daily_action_counters/RequestGetDailyActionCounters.java) |  |  |
+|  | 502 : 1 | invalid actions class prefix |
+|  | 502 : 2 | invalid action id |
+|  | 502 : 3 | can't query more than 365 days |
+| [RequestGetMonthlyActionCounters](https://github.com/vangav/vos_vangav_analytics_reader/blob/master/app/com/vangav/vos_vangav_analytics_reader/controllers/get_monthly_action_counters/RequestGetMonthlyActionCounters.java) |  |  |
+|  | 503 : 1 | invalid actions class prefix |
+|  | 503 : 2 | invalid action id |
+|  | 503 : 3 | can't query more than 120 months |
+| [RequestGetTotalActionCounters](https://github.com/vangav/vos_vangav_analytics_reader/blob/master/app/com/vangav/vos_vangav_analytics_reader/controllers/get_total_action_counters/RequestGetTotalActionCounters.java) |  |  |
+|  | 504 : 1 | actions class prefix |
+|  | 504 : 2 | invalid action id |
+| [RequestGetCategoryActions](https://github.com/vangav/vos_vangav_analytics_reader/blob/master/app/com/vangav/vos_vangav_analytics_reader/controllers/get_category_actions/RequestGetCategoryActions.java) |  |  |
+|  | 507 : 1 | category-name-short doesn't exists |
