@@ -87,6 +87,32 @@
 8. execute the command `./_execute_cql.sh v_analytics_dev.cql` to initialize the services' database tables
 9. `cd` to `vos_vangav_analytics_writer` and execute `./_run.sh` to start the analytics writer service on port 9000
 10. `cd` to `vos_vangav_analytics_reader` and execute `./_run.sh 7000` to start the analytics reader service on port 7000
+11. from your prefered client (*we recommned* [postman](https://www.getpostman.com/docs/postman/launching_postman/installation_and_updates)) start trying the service; refer to the **features** and **service references** sections for reference
++ at the end to stop the services: press `control + d` in the terminal session where each service was started in (9 and 10)
++ to stop cassandra: execute `ps auwx | grep cassandra` to get cassandra's `(pid)` then `kill -9 (pid)` to stop cassandra
+
+## covered topics
+
++ generate multiple services (writer + reader) to work together in a service oriented architecture
++ generic service design (handles any type of analytics)
+
+## features
+
+### [vangav analytics writer](https://github.com/vangav/vos_vangav_analytics_writer)
+
+| controller | feature |
+| ------------- | ------- |
+| [record action](https://github.com/vangav/vos_vangav_analytics_writer/tree/master/app/com/vangav/vos_vangav_analytics_writer/controllers/record_action) | handles incrementing analytics counters for the specified action |
+| [reload properties](https://github.com/vangav/vos_vangav_analytics_writer/tree/master/app/com/vangav/vos_vangav_analytics_writer/controllers/reload_properties) | handles reloading properties files as well as [actions.json](https://github.com/vangav/vos_vangav_analytics_writer/blob/master/conf/setup_data/actions.json) |
+
+### [vangav analytics reader](https://github.com/vangav/vos_vangav_analytics_reader)
+
+| controller(s) | feature |
+| ------------- | ------- |
+| [get total action counters](https://github.com/vangav/vos_vangav_analytics_reader/tree/master/app/com/vangav/vos_vangav_analytics_reader/controllers/get_total_action_counters), [get annual action counters](https://github.com/vangav/vos_vangav_analytics_reader/tree/master/app/com/vangav/vos_vangav_analytics_reader/controllers/get_annual_action_counters), [get monthly action counters](https://github.com/vangav/vos_vangav_analytics_reader/tree/master/app/com/vangav/vos_vangav_analytics_reader/controllers/get_monthly_action_counters), [get daily action counters](https://github.com/vangav/vos_vangav_analytics_reader/tree/master/app/com/vangav/vos_vangav_analytics_reader/controllers/get_daily_action_counters), [get category actions](https://github.com/vangav/vos_vangav_analytics_reader/tree/master/app/com/vangav/vos_vangav_analytics_reader/controllers/get_category_actions) and [get current date](https://github.com/vangav/vos_vangav_analytics_reader/tree/master/app/com/vangav/vos_vangav_analytics_reader/controllers/get_current_date) | handle getting analytics data by time or category |
+| [reload properties](https://github.com/vangav/vos_vangav_analytics_reader/tree/master/app/com/vangav/vos_vangav_analytics_reader/controllers/reload_properties) | handles reloading properties files as well as [actions.json](https://github.com/vangav/vos_vangav_analytics_reader/blob/master/conf/setup_data/actions.json) |
+
+
 
 
 
