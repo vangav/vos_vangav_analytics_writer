@@ -19,4 +19,73 @@
 
 + handles reading actions in various ways (e.g.: by year, by day, by category, ...)
 
-### structure
+### action structure
+
++ [actions.json](https://github.com/vangav/vos_vangav_analytics_writer/blob/master/conf/setup_data/actions.json) in both services define how analytics are structured
+
++ here's a simple example
+
+```json
+  {
+    "categories": [
+      {
+        "category_name": "page_views",
+        "category_name_short": "PV"
+      }
+    ],
+    "action_classes": [
+      {
+        "class_name": "backend_page_views",
+        "class_prefix": "BPV",
+        "class_wide_categories": [
+          "PV"
+        ],
+        "action_ids": [
+          {
+            "action_id": "quick_start",
+            "action_categories": []
+          }
+        ]
+      }
+    ]
+  }
+```
+
+| element | explanation |
+| ------- | ----------- |
+| []() |  |
+| []() |  |
+| []() |  |
+| []() |  |
+| []() |  |
+| []() |  |
+| []() |  |
+| []() |  |
+| []() |  |
+| []() |  |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
