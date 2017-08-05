@@ -140,6 +140,30 @@
 | [controllers](https://github.com/vangav/vos_vangav_analytics_reader/tree/master/app/com/vangav/vos_vangav_analytics_reader/controllers) | api implementation |
 | [v_analytics](https://github.com/vangav/vos_vangav_analytics_reader/tree/master/app/com/vangav/vos_vangav_analytics_reader/cassandra_keyspaces/v_analytics) | `v_analytics` cassandra's keyspace client |
 
+## change log
+
++ this section lists the 10-% code added after vangav backend generated 90+% of the code
+
+### [vangav analytics writer](https://github.com/vangav/vos_vangav_analytics_writer)
+
+| file/dir | change |
+| -------- | ------ |
+| [setup data](https://github.com/vangav/vos_vangav_analytics_writer/tree/master/conf/setup_data) | added [actions.json](https://github.com/vangav/vos_vangav_analytics_writer/blob/master/conf/setup_data/actions.json) used to define the analytics structure |
+| [Global.java](https://github.com/vangav/vos_vangav_analytics_writer/blob/master/app/Global.java) | added actions structure initialization |
+| [actions](https://github.com/vangav/vos_vangav_analytics_writer/tree/master/app/com/vangav/vos_vangav_analytics_writer/actions) | added the json representation of [actions.json](https://github.com/vangav/vos_vangav_analytics_writer/blob/master/conf/setup_data/actions.json) as well as its loader |
+| [controllers](https://github.com/vangav/vos_vangav_analytics_writer/tree/master/app/com/vangav/vos_vangav_analytics_writer/controllers) | added the implementation of request processing logic under `controller_name/HandlerControllerName.java` classes and nested response json structures under `controller_name/response_json` packages |
+
+### [vangav analytics reader](https://github.com/vangav/vos_vangav_analytics_reader)
+
+| file/dir | change |
+| -------- | ------ |
+| [setup data](https://github.com/vangav/vos_vangav_analytics_reader/tree/master/conf/setup_data) | added [actions.json](https://github.com/vangav/vos_vangav_analytics_reader/blob/master/conf/setup_data/actions.json) used to define the analytics structure |
+| [Global.java](https://github.com/vangav/vos_vangav_analytics_reader/blob/master/app/Global.java) | added actions structure initialization |
+| [actions](https://github.com/vangav/vos_vangav_analytics_reader/tree/master/app/com/vangav/vos_vangav_analytics_reader/actions) | added the json representation of [actions.json](https://github.com/vangav/vos_vangav_analytics_reader/blob/master/conf/setup_data/actions.json) as well as its loader |
+| [controllers](https://github.com/vangav/vos_vangav_analytics_reader/tree/master/app/com/vangav/vos_vangav_analytics_reader/controllers) | added the implementation of request processing logic under `controller_name/HandlerControllerName.java` classes and nested response json structures under `controller_name/response_json` packages |
+
+
+
 
 
 
