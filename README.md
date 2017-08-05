@@ -193,6 +193,46 @@
 |  | 400 : 5 | an action class must have at least one action id |
 |  | 400 : 6 | invalid action id |
 |  | 400 : 7 | invalid action category prefix |
+| [RequestGetAnnualActionCounters](https://github.com/vangav/vos_vangav_analytics_reader/blob/master/app/com/vangav/vos_vangav_analytics_reader/controllers/get_annual_action_counters/RequestGetAnnualActionCounters.java) |  |  |
+|  | 501 : 1 | invalid actions class prefix |
+|  | 501 : 2 | invalid action id |
+|  | 501 : 3 | to-year can't be smaller than from-year |
+|  | 501 : 4 | can't query more than 100 years per request |
+| []() |  |  |
+|  | 501 : 1 |  |
+|  | 501 : 1 |  |
+|  | 501 : 1 |  |
+|  | 501 : 1 |  |
+|  | 501 : 1 |  |
+|  | 501 : 1 |  |
+| []() |  |  |
+|  | 501 : 1 |  |
+|  | 501 : 1 |  |
+|  | 501 : 1 |  |
+|  | 501 : 1 |  |
+|  | 501 : 1 |  |
+|  | 501 : 1 |  |
+| []() |  |  |
+|  | 501 : 1 |  |
+|  | 501 : 1 |  |
+|  | 501 : 1 |  |
+|  | 501 : 1 |  |
+|  | 501 : 1 |  |
+|  | 501 : 1 |  |
+| []() |  |  |
+|  | 501 : 1 |  |
+|  | 501 : 1 |  |
+|  | 501 : 1 |  |
+|  | 501 : 1 |  |
+|  | 501 : 1 |  |
+|  | 501 : 1 |  |
+| []() |  |  |
+|  | 501 : 1 |  |
+|  | 501 : 1 |  |
+|  | 501 : 1 |  |
+|  | 501 : 1 |  |
+|  | 501 : 1 |  |
+|  | 501 : 1 |  |
 
 
 
