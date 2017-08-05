@@ -70,6 +70,24 @@
 | [action_id](https://github.com/vangav/vos_vangav_analytics_writer/blob/master/conf/setup_data/actions.json#L17) | unique action identifier within its class |
 | [action_categories](https://github.com/vangav/vos_vangav_analytics_writer/blob/master/conf/setup_data/actions.json#L18) | in addition to the class-wide-categories, here one can add extra categories specific to this action |
 
+## overview
+
++ this service is based on vangav backend's [vangav analytics template](https://github.com/vangav/vos_backend/tree/master/vangav_backend_templates/analytics)
++ this service has the 90+% of the vangav backend's generated code + the 10-% of the logic code needed to complete the service
+
+## try this service
+
+1. *for first timers* - follow the steps in the [system requirements tutorial](https://github.com/vangav/vos_backend#system-requirements)
+2. *for first timers* - follow the steps in the [workspace initialization tutorial](https://github.com/vangav/vos_backend#init)
+3. download [`vos_vangav_analytics_writer.zip`](https://github.com/vangav/vos_vangav_analytics_writer) and [`vos_vangav_analytics_reader.zip`](https://github.com/vangav/vos_vangav_analytics_reader) projects (from the green `clone or download` button) inside the workspace directory created previously (`my_services`) and unzip them
+4. **rename** unzipped directories, remove the `-master` from their names
+5. in the terminal `cd` to `vos_vangav_analytics_writer/cassandra/cql/`
+6. execute `./_start_cassandra.sh` to start cassandra
+7. `cd` to `vos_vangav_analytics_writer/cassandra/cql/drop_and_create/`
+8. execute the command `./_execute_cql.sh v_analytics_dev.cql` to initialize the services' database tables
+9. `cd` to `vos_vangav_analytics_writer` and execute `./_run.sh` to start the analytics writer service on port 9000
+10. `cd` to `vos_vangav_analytics_reader` and execute `./_run.sh 7000` to start the analytics reader service on port 7000
+
 
 
 
