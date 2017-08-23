@@ -1,9 +1,13 @@
 
+### [![YouTube Play Icon](http://youtube.com/favicon.ico)](https://www.youtube.com/watch?v=jIMGtZ_9QXs&list=PLTcKayTjao6rOj02gtRdiVhvzB1SWGyhv&index=8) **on [YouTube](https://www.youtube.com/watch?v=jIMGtZ_9QXs&list=PLTcKayTjao6rOj02gtRdiVhvzB1SWGyhv&index=8)**
+
 > **why?** vangav analytics is a [vangav backend](https://github.com/vangav/vos_backend) template covering: service oriented architecture and multi-entry-point api; this is also the analytics service used by all vangav's products
 
 # vangav analytics writer
 
 + [vangav analytics writer](https://github.com/vangav/vos_vangav_analytics_writer) and [vangav analytics reader](https://github.com/vangav/vos_vangav_analytics_reader) services work together and are generated using [vangav backend](https://github.com/vangav/vos_backend)
+
+![vangav analytics backend design](https://scontent-mad1-1.xx.fbcdn.net/v/t31.0-8/21015740_1976185529263757_5203314044080234738_o.png?oh=b42d5dc1441c56d3c84ee684de67b035&oe=5A2D6F2F)
 
 ## prerequisite
 
@@ -16,6 +20,8 @@
 + splitting the analytics backend into writer and reader services is done because writer/reader loads can vary significantly (i.e.: writer can take the load of millions of users using analyzed services while the reader can be used by few system admins); so it's easier to handle these loads by deploying a lot more writer than reader services
 + actions are defined in a flexible/generic json file (as explained later in this section) to make it easily extensible in handling analysis as backend services change/grow
 + both of the writer and reader services have actions-config-reload feature to allow modifying actions without having to re-start the services
+
+![vangav analytics backend design philosophy](https://scontent-mad1-1.xx.fbcdn.net/v/t31.0-8/20988522_1976185525930424_6416597533579981415_o.png?oh=133da2581d640a5406cb01a8feb1c048&oe=5A1BDE03)
 
 ### [vangav analytics writer](https://github.com/vangav/vos_vangav_analytics_writer)
 
@@ -69,6 +75,8 @@
 | [action_ids](https://github.com/vangav/vos_vangav_analytics_writer/blob/master/conf/setup_data/actions.json#L15) | defines a single action (e.g.: home-page, download-button, camera-flip, ...) |
 | [action_id](https://github.com/vangav/vos_vangav_analytics_writer/blob/master/conf/setup_data/actions.json#L17) | unique action identifier within its class |
 | [action_categories](https://github.com/vangav/vos_vangav_analytics_writer/blob/master/conf/setup_data/actions.json#L18) | in addition to the class-wide-categories, here one can add extra categories specific to this action |
+
+![actions structure](https://scontent-mad1-1.xx.fbcdn.net/v/t31.0-8/20988459_1976185532597090_1998586370317378204_o.png?oh=cc6d5d4845e1ae97300f9f37154c1ea3&oe=5A379A8E)
 
 ## overview
 
